@@ -38,7 +38,7 @@
 
 
 ## Deployed Link
-### https://sarapprecipes.herokuapp.com/
+### https://sarapp-recipe-app.herokuapp.com/
 
 
 ## Credits
