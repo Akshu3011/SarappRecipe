@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sarApp</title>
+    <!--Import Google Icon Font-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  
+    <nav class="nav-extended white-text lighten-5">
+        <div class="nav-extended">
+          
+            <span class="nav-title right ">sarApp
+          
+                 
+               <img src="https://res.cloudinary.com/dbusqnlkm/image/upload/v1660174530/nbeslbabbnyurix4cki4.jpg" alt="logo" class="circle " style="height: 50; width: 70px;">
+               </span>
+              
+           
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+             <ul id="nav-mobile" class="left hide-on-med-and-down white-text">
+                <li><a href="/" class="white-text">Home</a></li>
+      
+                <li> {{#if logged_in}}
+                <a href="/profile" class="white-text">Profile</a> 
+                <li><a href="/addrecipe" class="dashboard white-text">Add Recipe</a></li>
+              <li><a class=" white-text" id="logout">Logout</a></li>
+              <li>{{else}}
+                <a href="/login" class="white-text">Login</a>
+                {{/if}}</li>
+            </ul>
+          
+        </div>
+        <div class="nav-content">
+        </div>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+     <li><a href="/" class="white-text">Home</a></li>
+      
+                <li> {{#if logged_in}}
+      <a href="/profile" class="white-text">Profile</a> 
+       <li><a href="/addrecipe" class="dashboard white-text">Add Recipe</a></li>
+              <li><a class=" white-text" id="logout">Logout</a></li>
+              <li>{{else}}
+                <a href="/login" class="white-text">Login</a>
+                {{/if}}</li>
+            </ul>
+
+    <main class="container">
+
+      <!-- Render the sub layout -->
+      {{{ body }}}
+
+    </main>
+    
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="./js/script.js"> </script>
+ 
+</body>
+<footer>
+<div class="footer-copyright">
+            <div class="footer-data container center">
+            sarApp &#169; 2022
+            </div>
+          </div>
+          </footer>
+</html>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+</html>
+
